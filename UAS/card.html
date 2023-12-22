@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>santalieproject - home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="card.css">
+</head>
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="foto.html">Foto</a>
+        <a href="background.html">Background</a>
+        <a href="card.html">Card</a>
+        <a href="about.html">About</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+    <header>
+        <h1>Selamat Datang di Galeri Background</h1>
+        <p>Temukan koleksi Background berkualitas tinggi untuk kebutuhan kreatifmu!</p>
+    </header>
+    <div class="cards-container">
+        <div class="card">
+            <div class="card-content">
+                <h1>Selamat Ulang Tahun!</h1>
+                <p>Semoga hari ulang tahunmu penuh dengan kebahagiaan!</p>
+                <a href="#" class="share-btn" onclick="shareCard()">Share</a>
+                <a href="#" class="download-btn" download="kartu_ucapan.png" onclick="downloadCard()">Download</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h1>Happy Anniversary</h1>
+                <p>Aku berharap atas kebahagiaan kalian berdua untuk selamanya.</p>
+                <a href="#" class="share-btn" onclick="shareCard()">Share</a>
+                <a href="#" class="download-btn" download="kartu_ucapan.png" onclick="downloadCard()">Download</a>
+            </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+              <h1>Selamat Hari Ibu</h1>
+              <p>Bu, kamu adalah wanita paling luar biasa dalam hidupku, dan kamu akan selalu menjadi nomor satu bagiku. Selamat Hari Ibu!</p>
+              <a href="#" class="share-btn" onclick="shareCard()">Share</a>
+              <a href="#" class="download-btn" download="kartu_ucapan.png" onclick="downloadCard()">Download</a>
+          </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+            <h1>Selamat Hari ayah</h1>
+            <p>Selamat Hari Ayah! Ayah adalah pria yang membuatku seperti sekarang ini. Terima kasih dan selamat Hari Ayah</p>
+            <a href="#" class="share-btn" onclick="shareCard()">Share</a>
+            <a href="#" class="download-btn" download="kartu_ucapan.png" onclick="downloadCard()">Download</a>
+        </div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+          <h1>Selamat Hari guru</h1>
+          <p>Selamat Hari Guru! Terima kasih atas dedikasi dan cinta yang Bapak/Ibu guru berikan kepada kami, para murid. Bapak/Ibu guru adalah pahlawan tanpa tanda jasa.</p>
+          <a href="#" class="share-btn" onclick="shareCard()">Share</a>
+          <a href="#" class="download-btn" download="kartu_ucapan.png" onclick="downloadCard()">Download</a>
+      </div>
+    </div>
+  <div class="card">
+    <div class="card-content">
+        <h1>Selamat Hari Kemerdekaan RI yang ke-78</h1>
+        <p>semoga Indonesia makin maju, makin kuat, dan makin sejahtera rakyatnya!</p>
+        <a href="#" class="share-btn" onclick="shareCard()">Share</a>
+        <a href="#" class="download-btn" download="kartu_ucapan.png" onclick="downloadCard()">Download</a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+        <h1>Selamat ulang tahun ke 17</h1>
+        <p>untuk orang tersayang bagiku. Kami menyayangimu. Sweet seventeen digambarkan bertambah dewasanya seseorang. Jadi semoga kamu tambah dewasa. Happy birthday untukmu. </p>
+        <a href="#" class="share-btn" onclick="shareCard()">Share</a>
+        <a href="#" class="download-btn" download="kartu_ucapan.png" onclick="downloadCard()">Download</a>
+    </div>
+</div>
+<div class="card">
+  <div class="card-content">
+      <h1>Selamat pagi</h1>
+      <p>Selamat pagi sayang, waktunya beraktivitas lagi yuk, semoga harimu menyenangkan.</p>
+      <a href="#" class="share-btn" onclick="shareCard()">Share</a>
+      <a href="#" class="download-btn" download="kartu_ucapan.png" onclick="downloadCard()">Download</a>
+  </div>
+</div>
+<div class="card">
+  <div class="card-content">
+      <h1>Happy Wedding</h1>
+      <p>Selamat menikah! Semoga kalian berdua selalu bahagia dan langgeng hingga akhir hayat. </p>
+      <a href="#" class="share-btn" onclick="shareCard()">Share</a>
+      <a href="#" class="download-btn" download="kartu_ucapan.png" onclick="downloadCard()">Download</a>
+  </div>
+</div>
+<div class="card">
+  <div class="card-content">
+      <h1>Selamat Wisuda</h1>
+      <p>Selamat menyandang gelar sarjana, semoga ilmu yang didapat selama berkuliah bisa bermanfaat untukmu di dunia kerja. </p>
+      <a href="#" class="share-btn" onclick="shareCard()">Share</a>
+      <a href="#" class="download-btn" download="kartu_ucapan.png" onclick="downloadCard()">Download</a>
+  </div>
+</div>
+</div>
+    <div class="footer">
+        <p>© 2023 snaimsi Project. All rights reserved. Terms and Conditions | Privacy Policy. Theme design by snaimsi</p>
+    </div>
+    <script>
+        function shareCard() {
+            alert('Kartu ucapan telah dibagikan!');
+        }
+
+        function downloadCard() {
+            var card = document.querySelector('.card');
+            html2canvas(card).then(function(canvas) {
+                var image = canvas.toDataURL('image/png');
+                var link = document.createElement('a');
+                link.download = 'kartu_ucapan.png';
+                link.href = image;
+                link.click();
+            });
+        }
+    </script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+</html>
